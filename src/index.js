@@ -1,15 +1,15 @@
 import videojs from 'video.js'
 import AnnotationComments from '@contently/videojs-annotation-comments'
+require('!style-loader!css-loader!video.js/dist/video-js.css');
+require('!style-loader!css-loader!@contently/videojs-annotation-comments/build/css/annotations.css');
 import './style.css';
-require('!style-loader!css-loader!video.js/dist/video-js.css')
-
 var player = videojs('example_video_1');
 videojs.registerPlugin('annotationComments', AnnotationComments(videojs))
 
 var annotations = [
     {
         id: 'myId',
-        range: { start: 5, end: 60 },
+        range: { start: 60, end: 120 },
         comments: [
           {
             id: 'myCommentId',
@@ -39,7 +39,7 @@ const pluginOptions = {
     // If false, step two of adding annotations (writing and saving the comment) will be disabled
     internalCommenting: true,
     // If true, toggle the player to annotation mode immediately after init. (NOTE - "annotationModeEnabled" event is not fired for this initial state)
-    startInAnnotationMode: false
+    startInAnnotationMode: true
 };
 
 var plugin = player.annotationComments(pluginOptions)
