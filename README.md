@@ -3,4 +3,4 @@
     yarn install
     yarn run develop
 ```
-Open ./dist/index.html
+Open ./index.html
