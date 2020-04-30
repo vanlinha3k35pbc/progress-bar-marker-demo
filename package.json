@@ -20,7 +20,7 @@
   "dependencies": {
     "@contently/videojs-annotation-comments": "^2.0.1",
     "imports-loader": "^0.8.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "video.js": "^7.6.6"
   }
 }
